@@ -91,7 +91,6 @@ module Git2
   LIBGIT2_VER_MINOR = "27"
   LIBGIT2_VER_PATCH = "0"
   LIBGIT2_VER_REVISION = "7"
-
   attach_function :git_libgit2_version, [:pointer, :pointer, :pointer], :void
 
   enum :git_feature_t, [:GIT_FEATURE_THREADS, 1, :GIT_FEATURE_HTTPS, 2, :GIT_FEATURE_SSH, 4, :GIT_FEATURE_NSEC, 8]
@@ -112,102 +111,127 @@ module Git2
 
 
   class GitOdb < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitOdbBackend < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitOdbObject < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitOdbStream < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitOdbWritepack < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRefdb < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRefdbBackend < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRepository < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitWorktree < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitObject < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRevwalk < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitTag < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitBlob < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitCommit < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitTreeEntry < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitTree < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitTreebuilder < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitIndex < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitIndexConflictIterator < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitConfig < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitConfigBackend < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitReflogEntry < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitReflog < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitNote < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitPackbuilder < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -222,30 +246,37 @@ module Git2
 
 
   class GitReference < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitReferenceIterator < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitTransaction < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitAnnotatedCommit < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitMergeResult < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitStatusList < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRebase < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -259,26 +290,32 @@ module Git2
 
 
   class GitRefspec < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRemote < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitTransport < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitPush < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRemoteHead < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitRemoteCallback < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -302,6 +339,7 @@ module Git2
   callback :git_transport_certificate_check_cb, [GitCert.by_ref, :int32, :pointer, :pointer], :int32
 
   class GitSubmodule < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -315,6 +353,7 @@ module Git2
 
 
   class GitWritestream < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -360,6 +399,7 @@ module Git2
   attach_function :git_oid_iszero, [:pointer], :int32
 
   class GitOidShorten < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -599,6 +639,7 @@ module Git2
 
 
   class GitBlame < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -621,6 +662,7 @@ module Git2
   attach_function :git_branch_delete, [GitReference.by_ref], :int32
 
   class GitBranchIterator < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -831,6 +873,7 @@ module Git2
 
 
   class GitDiff < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -956,6 +999,7 @@ module Git2
   attach_function :git_diff_from_buffer, [:pointer, :pointer, :uint64], :int32
 
   class GitDiffStat < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1035,6 +1079,7 @@ module Git2
   attach_function :git_oidarray_free, [GitOidarray.by_ref], :void
 
   class GitIndexer < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1277,6 +1322,7 @@ module Git2
 
 
   class GitCred < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1290,14 +1336,17 @@ module Git2
 
 
   class Libssh2Session < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class Libssh2UserauthKbdintPrompt < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class Libssh2UserauthKbdintResponse < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1600,6 +1649,7 @@ module Git2
   callback :git_config_foreach_cb, [:pointer, :pointer], :int32
 
   class GitConfigIterator < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1713,6 +1763,7 @@ module Git2
   attach_function :git_describe_init_format_options, [GitDescribeFormatOption.by_ref, :uint32], :int32
 
   class GitDescribeResult < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1750,10 +1801,12 @@ module Git2
 
 
   class GitFilter < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitFilterList < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1808,6 +1861,7 @@ module Git2
   callback :git_note_foreach_cb, [:pointer, :pointer, :pointer], :int32
 
   class GitIterator < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1934,6 +1988,7 @@ module Git2
   end
 
   class GitPatch < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
@@ -1966,10 +2021,12 @@ module Git2
   attach_function :git_patch_to_buf, [GitBuf.by_ref, GitPatch.by_ref], :int32
 
   class GitPathspec < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
   class GitPathspecMatchList < FFI::Struct
+    layout :_dummy, :size_t
   end
 
 
