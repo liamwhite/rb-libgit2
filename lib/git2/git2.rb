@@ -2,7 +2,7 @@ require 'ffi'
 
 module Git2
   extend FFI::Library
-  ffi_lib "git2"
+  ffi_lib ["git2", "libgit2.so.27"]
 
   def self.attach_function(name, *_)
     super
